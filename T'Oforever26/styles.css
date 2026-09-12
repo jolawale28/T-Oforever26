@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --aqua: #2f8f89;
   --aqua-dark: #216b68;
@@ -48,7 +46,7 @@ a {
   overflow: hidden;
   background:
     linear-gradient(135deg, rgba(33, 107, 104, .9), rgba(196, 99, 63, .72)),
-    url('/public/images/img1.JPG') center/cover no-repeat;
+    url('images/img1.JPG') center/cover no-repeat;
   background-color: var(--aqua)
 }
 
@@ -390,52 +388,6 @@ h2 {
   gap: 12px
 }
 
-.image-slider {
-  width: 100%;
-  height: 950px;
-  overflow: hidden;
-  position: relative
-}
-
-.slides {
-  display: flex;
-  width: 400%;
-  height: 100%;
-  animation: slide 16s infinite
-}
-
-.slides img {
-  width: 25%;
-  height: 100%;
-  object-fit: cover
-}
-
-@keyframes slide {
-  0%,
-  20% {
-    transform: translateX(0)
-  }
-
-  25%,
-  45% {
-    transform: translateX(-25%)
-  }
-
-  50%,
-  70% {
-    transform: translateX(-50%)
-  }
-
-  75%,
-  95% {
-    transform: translateX(-75%)
-  }
-
-  100% {
-    transform: translateX(0)
-  }
-}
-
 .photo {
   position: relative;
   background: linear-gradient(135deg, var(--aqua-soft), #ead5c9);
@@ -463,7 +415,7 @@ h2 {
 .photo-1 {
   grid-column: span 7;
   grid-row: span 3;
-  /* background-image: url(); */
+  background-image: url();
   background-size: cover;
   background-position: center
 }
@@ -471,7 +423,7 @@ h2 {
 .photo-2 {
   grid-column: span 5;
   grid-row: span 2;
-  /* background-image: url(); */
+  background-image: url();
   background-size: cover;
   background-position: center
 }
@@ -479,7 +431,7 @@ h2 {
 .photo-3 {
   grid-column: span 5;
   grid-row: span 3;
-  /* background-image: url(); */
+  background-image: url();
   background-size: cover;
   background-position: center
 }
@@ -487,7 +439,7 @@ h2 {
 .photo-4 {
   grid-column: span 4;
   grid-row: span 2;
-  /* background-image: url(); */
+  background-image: url();
   background-size: cover;
   background-position: center
 }
@@ -495,7 +447,7 @@ h2 {
 .photo-5 {
   grid-column: span 3;
   grid-row: span 2;
-  /* background-image: url(); */
+  background-image: url();
   background-size: cover;
   background-position: center
 }
@@ -503,7 +455,7 @@ h2 {
 .photo-6 {
   grid-column: span 5;
   grid-row: span 2;
-  /* background-image: url(); */
+  background-image: url();
   background-size: cover;
   background-position: center
 }
@@ -624,7 +576,7 @@ form button,
 
 .map-placeholder {
   min-height: 430px;
-  background: linear-gradient(120deg, rgba(47, 143, 137, .92), rgba(196, 99, 63, .86)), url('/public/images/img1.JPG') center/cover;
+  background: linear-gradient(120deg, rgba(47, 143, 137, .92), rgba(196, 99, 63, .86)), url('images/venue.jpg') center/cover;
   display: grid;
   place-items: center;
   text-align: center;

@@ -1,69 +1,204 @@
-import Image from "next/image";
+
+import Header from "./components/header";
 
 export default function Home() {
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <div className="music-control" id="musicControl" title="Toggle music">♫</div>
+
+      {/* Header + Hero */}
+      <Header />
+      {/* Header + Hero */}
+
+      <main>
+        <section className="section intro" id="story">
+          <div className="section-label">01 — OUR STORY</div>
+          <div className="two-col">
+            <div>
+              <p className="script">A love worth celebrating</p>
+              <h2>From a beautiful beginning to forever.</h2>
+            </div>
+            <div className="story-copy">
+              <p>Every love story has a beginning, but ours is a journey filled with friendship, laughter, prayer, growth
+                and countless moments that brought two hearts closer.</p>
+              <p>Now, with grateful hearts and joyful anticipation, we invite you to celebrate the next chapter with us.</p>
+              <p className="signature">With love,<br /><strong>Temitope & Oladele</strong></p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section journey" id="journey">
+          <div className="section-label">02 — OUR JOURNEY</div>
+          <div className="center-heading">
+            <p className="script">The moments that led us here</p>
+            <h2>Our Journey</h2>
+          </div>
+          <div className="timeline">
+            <article className="timeline-item">
+              <div className="timeline-dot">01</div>
+              <div><span>THE BEGINNING</span>
+                <h3>When two paths crossed</h3>
+                <p>Replace this text with the story of how you first met.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-dot">02</div>
+              <div><span>THE JOURNEY</span>
+                <h3>Growing together</h3>
+                <p>Add your favourite milestones, memories and moments here.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-dot">03</div>
+              <div><span>FAMILY</span>
+                <h3>Our families became one</h3>
+                <p>Add details about your introduction and the beautiful family moments.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-dot">04</div>
+              <div><span>FOREVER</span>
+                <h3>And now, we say “I do”</h3>
+                <p>28 November 2026 — the beginning of our forever.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="section celebration" id="celebration">
+          <div className="section-label">03 — THE CELEBRATION</div>
+          <div className="center-heading light">
+            <p className="script">Save the date</p>
+            <h2>Join us as we celebrate love</h2>
+          </div>
+          <div className="event-grid">
+            <article className="event-card">
+              <div className="event-icon">♡</div>
+              <p className="event-label"></p>
+              <h3>ENGAGEMENT</h3>
+              <p className="editable">Venue name goes here<br />Anike Titilayo Hope Center,No 4, Bodunrin Street, Ile Ise Awo,
+                Abeokuta. </p>
+              <p className="editable">Time: 10:00 AM</p>
+            </article>
+            <article className="event-card featured">
+              <div className="event-icon">✦</div>
+              <p className="event-label">THE DATE</p>
+              <h3>28 Noember 2026</h3>
+              <p>Come dressed to celebrate, laugh, dance and make memories with us.</p>
+              <a className="text-link" href="#rsvp">Confirm your attendance →</a>
+            </article>
+            <article className="event-card">
+              <div className="event-icon">♧</div>
+              <h3>RECEPTION</h3>
+              <p className="editable">Reception venue goes here<br />Anike Titilayo Hope Center,No 4, Bodunrin Street, Ile Ise
+                Awo, Abeokuta.</p>
+              <p className="editable">Time: 1:00 PM</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="section gallery" id="gallery">
+          <div className="section-label">04 — OUR MOMENTS</div>
+          <div className="center-heading">
+            <p className="script">A few memories</p>
+            <h2>Gallery</h2>
+          </div>
+
+          <section className="image-slider">
+            <div className="slides">
+              <img src="/images/img3.jpeg" alt="Photo 1" />
+              <img src="/images/img6.jpeg" alt="Photo 2" />
+              <img src="/images/img7.jpg" alt="Photo 3" />
+              <img src="/images/img8.jpg" alt="Photo 4" />
+            </div>
+          </section>
+        </section>
+
+        <section className="section gift" id="gift">
+          <div className="section-label">05 — WITH LOVE</div>
+          <h2>Gifts & Wishes</h2>
+          <p className="script">Your presence is our greatest gift</p>
+          <div className="wishlist">
+            <div className="wish-item"><span>HONEYMOON FUND</span><span className="placeholder">Surprise us</span></div>
+            <div className="wish-item"><span>WASHING MACHINE</span><span className="placeholder">₦50,000</span></div>
+            <div className="wish-item"><span>TELEVISION</span><span className="placeholder">₦50,000</span></div>
+            <div className="wish-item"><span>FOOD PROCESSOR</span><span className="placeholder">₦70,000</span></div>
+            <div className="wish-item"><span>GENERATOR </span><span className="placeholder">₦70,000</span></div>
+            <div className="wish-item"><span>AIR FRYER </span><span className="placeholder">₦75,000</span></div>
+            <div className="wish-item"><span>INVERTER</span><span className="placeholder">₦2,000,000</span></div>
+            <div className="wish-item"><span>SANDWICH MAKER</span><span className="placeholder">₦50,000</span></div>
+          </div>
+          <div className="gift-card">
+            <p>For friends and family who would like to bless us with a gift, details can be added below.</p>
+            <div className="account">
+              <strong>Bank / Gift Details</strong>
+              <span>Bank Name: Opay</span>
+              <span>Account Name: TEMITOPE & OLADELE</span>
+              <span>Account Number: 8068384394</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="section rsvp" id="rsvp">
+          <div className="section-label">06 — RSVP</div>
+          <div className="rsvp-box">
+            <div>
+              <p className="script">We would love to have you</p>
+              <h2>Will you celebrate with us?</h2>
+              <p>Please confirm your attendance so we can prepare a special place for you.</p>
+            </div>
+            <form id="rsvpForm">
+              <label>Full Name<input name="name" required placeholder="Your name" /></label>
+              <label>Phone Number<input name="phone" required placeholder="+234..." /></label>
+              <label>Email Address<input name="email" type="email" placeholder="you@example.com" /></label>
+              <label>Will you attend?
+                <select name="attendance" required>
+                  <option value="">Select</option>
+                  <option>Joyfully attending</option>
+                  <option>Sorry, I can't attend</option>
+                </select>
+              </label>
+              <label>Guest Category
+                <select name="category">
+                  <option>Family</option>
+                  <option>Friend</option>
+                  <option>Colleague</option>
+                  <option>Church</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>Message<textarea name="message" rows={4}
+                placeholder="Leave a message for the couple"></textarea></label>
+              <button className="btn btn-primary" type="submit">SEND RSVP</button>
+              <p className="form-note">Demo mode: connect this form to Formspree, Google Forms, or your own backend before
+                publishing.</p>
+              <div id="formMessage" className="form-message"></div>
+            </form>
+          </div>
+        </section>
+
+        <section className="map-section">
+          <div className="map-placeholder">
+            <div>
+              <p className="script">Find us here</p>
+              <h2>Ibadan, Nigeria</h2>
+              <a className="btn btn-outline" href="https://www.google.com/maps" target="_blank" rel="noopener">OPEN MAPS</a>
+            </div>
+          </div>
+        </section>
+
       </main>
-    </div>
+
+      {/* Footer */}
+      < footer >
+        <div className="footer-mark">T'O</div>
+        <h2>Forever '26</h2>
+        <p>Temitope & Oladele</p>
+        <p>25 September 2026 · Ibadan, Nigeria</p>
+        <p className="hashtag">#TOForever26</p>
+      </footer >
+      {/* Footer */}
+    </>
   );
 }
