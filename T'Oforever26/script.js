@@ -39,8 +39,8 @@ document.getElementById("rsvpForm").addEventListener("submit",(e)=>{
 
 // Optional music hook.
 // Add an audio file at audio/music.mp3 and uncomment the lines below.
-// const audio = new Audio("audio/music.mp3");
-// audio.loop=true;
-// document.getElementById("musicControl").onclick=()=>{
-//   if(audio.paused) audio.play(); else audio.pause();
-// };
+const audio = new Audio("audio/bg-audio.mp3");
+audio.loop=true;
+document.getElementById("musicControl").onclick=()=>{
+  if(audio.paused) audio.play(); else audio.pause();
+};

@@ -1,11 +1,12 @@
 
 import Header from "./components/header";
+import MusicControl from "./components/music-control";
 
 export default function Home() {
 
   return (
     <>
-      <div className="music-control" id="musicControl" title="Toggle music">♫</div>
+      <MusicControl />
 
       {/* Header + Hero */}
       <Header />
