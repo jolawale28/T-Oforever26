@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    process.env.NEXT_SITE_URL ?? "http://localhost:3000",
   ),
   title: "T'O Forever '26 | Temitope & Oladele",
   description: "Two hearts. One journey. Forever begins.",
