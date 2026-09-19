@@ -1,4 +1,4 @@
-
+import AttendanceConfirmation from "./components/attendance_confirmation_form";
 import Header from "./components/header";
 import MusicControl from "./components/music-control";
 
@@ -85,7 +85,7 @@ export default function Home() {
             <article className="event-card featured">
               <div className="event-icon">✦</div>
               <p className="event-label">THE DATE</p>
-              <h3>28 Noember 2026</h3>
+              <h3>28 November 2026</h3>
               <p>Come dressed to celebrate, laugh, dance and make memories with us.</p>
               <a className="text-link" href="#rsvp">Confirm your attendance →</a>
             </article>
@@ -149,33 +149,7 @@ export default function Home() {
               <h2>Will you celebrate with us?</h2>
               <p>Please confirm your attendance so we can prepare a special place for you.</p>
             </div>
-            <form id="rsvpForm">
-              <label>Full Name<input name="name" required placeholder="Your name" /></label>
-              <label>Phone Number<input name="phone" required placeholder="+234..." /></label>
-              <label>Email Address<input name="email" type="email" placeholder="you@example.com" /></label>
-              <label>Will you attend?
-                <select name="attendance" required>
-                  <option value="">Select</option>
-                  <option>Joyfully attending</option>
-                  <option>Sorry, I can't attend</option>
-                </select>
-              </label>
-              <label>Guest Category
-                <select name="category">
-                  <option>Family</option>
-                  <option>Friend</option>
-                  <option>Colleague</option>
-                  <option>Church</option>
-                  <option>Other</option>
-                </select>
-              </label>
-              <label>Message<textarea name="message" rows={4}
-                placeholder="Leave a message for the couple"></textarea></label>
-              <button className="btn btn-primary" type="submit">SEND RSVP</button>
-              <p className="form-note">Demo mode: connect this form to Formspree, Google Forms, or your own backend before
-                publishing.</p>
-              <div id="formMessage" className="form-message"></div>
-            </form>
+            <AttendanceConfirmation />
           </div>
         </section>
 
