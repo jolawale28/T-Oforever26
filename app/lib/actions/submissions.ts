@@ -2,6 +2,7 @@
 
 import { NeonDbError } from "@neondatabase/serverless";
 import { sql } from "../db";
+import { TAttendee, TAttendeesResponse } from "@/app/types";
 
 type SubmitFormResult =
     | {
@@ -70,4 +71,64 @@ export async function submitForm(
             message: errObj.message
         };
     }
+}
+
+export async function getAttendees(): Promise<TAttendee[]> {
+    const submissions = await sql`
+        SELECT
+            id,
+            fullname,
+            email,
+            phone,
+            will_attend,
+            family_category,
+            message,
+            created_at
+        FROM attendance_confirmation_tb
+        ORDER BY created_at DESC
+    `;
+
+    return submissions as TAttendee[];
+}
+
+export async function getPaginatedAttendees(
+    page = 1,
+    pageSize = 10
+): Promise<TAttendeesResponse> {
+    const offset = (page - 1) * pageSize;
+
+    const [submissions, countResult] = await Promise.all([
+        sql`
+            SELECT
+                id,
+                fullname,
+                email,
+                phone,
+                will_attend,
+                family_category,
+                message,
+                created_at
+            FROM attendance_confirmation_tb
+            ORDER BY created_at DESC
+            LIMIT ${pageSize}
+            OFFSET ${offset}
+        `,
+
+        sql`
+            SELECT COUNT(*) AS total
+            FROM attendance_confirmation_tb
+        `,
+    ]);
+
+    const total = Number(countResult[0].total);
+
+    return {
+        data: submissions as TAttendee[],
+        pagination: {
+            page,
+            pageSize,
+            total,
+            totalPages: Math.ceil(total / pageSize),
+        },
+    };
 }
