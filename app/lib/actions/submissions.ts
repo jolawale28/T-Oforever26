@@ -21,7 +21,6 @@ export async function submitForm(
     previousState: SubmissionState,
     formData: FormData
 ): Promise<SubmissionState> {
-    console.log(formData, " :: formData")
     const name = formData.get("name")?.toString().trim();
     const email = formData.get("email")?.toString().trim();
     const phone = formData.get("phone")?.toString().trim();
