@@ -3,7 +3,7 @@
 // ===============================
 // Change these values and save.
 // Date format: YYYY-MM-DDTHH:MM:SS
-const WEDDING_DATE = "2026-11-28T11:00:00";
+const WEDDING_DATE = "2026-12-05T11:00:00";
 
 // Countdown
 function updateCountdown(){

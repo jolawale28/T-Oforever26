@@ -157,7 +157,7 @@ export default function Home() {
           <div className="map-placeholder">
             <div>
               <p className="script">Find us here</p>
-              <h2>Ibadan, Nigeria</h2>
+              <h2>Abeokuta, Nigeria</h2>
               <a className="btn btn-outline" href="https://www.google.com/maps" target="_blank" rel="noopener">OPEN MAPS</a>
             </div>
           </div>
