@@ -61,7 +61,7 @@ export default function Home() {
               <div className="timeline-dot">04</div>
               <div><span>FOREVER</span>
                 <h3>And now, we say “I do”</h3>
-                <p>28 November 2026 — the beginning of our forever.</p>
+                <p>05 December 2026 — the beginning of our forever.</p>
               </div>
             </article>
           </div>
@@ -85,7 +85,7 @@ export default function Home() {
             <article className="event-card featured">
               <div className="event-icon">✦</div>
               <p className="event-label">THE DATE</p>
-              <h3>28 November 2026</h3>
+              <h3>05 December 2026</h3>
               <p>Come dressed to celebrate, laugh, dance and make memories with us.</p>
               <a className="text-link" href="#rsvp">Confirm your attendance →</a>
             </article>
@@ -170,7 +170,7 @@ export default function Home() {
         <div className="footer-mark">T'O</div>
         <h2>Forever '26</h2>
         <p>Temitope & Oladele</p>
-        <p>25 September 2026 · Ibadan, Nigeria</p>
+        <p>05 December 2026 · Abeokuta, Nigeria</p>
         <p className="hashtag">#TOForever26</p>
       </footer >
       {/* Footer */}
