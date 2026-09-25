@@ -72,7 +72,7 @@ export default function Header() {
                 <p className="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
                 <h1>Temitope <span>&</span> Oladele</h1>
                 <p className="tagline">Two hearts. One journey. Forever begins.</p>
-                <div className="date-pill" id="weddingDateDisplay">28 · 11 · 2026</div>
+                <div className="date-pill" id="weddingDateDisplay">05 · 12 · 2026</div>
                 <p className="location-placeholder">Abeokuta, Nigeria</p>
                 <a className="btn btn-primary" href="#rsvp">RSVP WITH US</a>
                 <Countdown />
