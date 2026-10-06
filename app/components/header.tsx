@@ -51,11 +51,11 @@ export const NavBar = () => {
                 ☰
             </button>
             <div className={`nav-links${isMenuOpen ? " open" : ""}`} id="navLinks">
-                <a href="#story" onClick={() => setIsMenuOpen(false)}>Our Story</a>
-                <a href="#journey" onClick={() => setIsMenuOpen(false)}>Journey</a>
-                <a href="#celebration" onClick={() => setIsMenuOpen(false)}>Celebration</a>
-                <a href="#gallery" onClick={() => setIsMenuOpen(false)}>Gallery</a>
-                <a href="#rsvp" onClick={() => setIsMenuOpen(false)}>RSVP</a>
+                <a href="/#story" onClick={() => setIsMenuOpen(false)}>Our Story</a>
+                <a href="/#journey" onClick={() => setIsMenuOpen(false)}>Journey</a>
+                <a href="/#celebration" onClick={() => setIsMenuOpen(false)}>Celebration</a>
+                <a href="/#gallery" onClick={() => setIsMenuOpen(false)}>Gallery</a>
+                <a href="/#rsvp" onClick={() => setIsMenuOpen(false)}>RSVP</a>
             </div>
         </nav>
     )
