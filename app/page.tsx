@@ -1,6 +1,32 @@
 import AttendanceConfirmation from "./components/attendance_confirmation_form";
+import GallerySlider from "./components/gallery-slider";
 import Header from "./components/header";
 import MusicControl from "./components/music-control";
+import {
+  AirVent,
+  Blender,
+  CreditCard,
+  Heart,
+  House,
+  Landmark,
+  Luggage,
+  Sandwich,
+  Tv,
+  UserRound,
+  WashingMachine,
+  Zap,
+} from "lucide-react";
+
+const giftItems = [
+  { name: "Honeymoon Fund", price: "Surprise us", icon: Luggage, featured: true },
+  { name: "Washing Machine", price: "₦380,000", icon: WashingMachine },
+  { name: "Television", price: "₦400,000", icon: Tv },
+  { name: "Food Processor", price: "₦75,000", icon: Blender },
+  { name: "Air Fryer", price: "₦75,000", icon: AirVent },
+  { name: "Inverter", price: "₦2,000,000", icon: Zap },
+  { name: "Sandwich Maker", price: "₦50,000", icon: Sandwich },
+  { name: "Home Essentials", price: "₦70,000", icon: House },
+];
 
 export default function Home() {
 
@@ -42,11 +68,11 @@ export default function Home() {
                 <h3>When two paths crossed</h3>
                 <p>For years, we had been attending the same church, Redeemed Christian Church of God. We served in the same youth department and had crossed paths many times, but neither of us imagined where our story would eventually lead.
 
-One Sunday after church, during a youth relationship programme, we found ourselves sitting beside each other. The meeting was interactive, full of conversations and laughter, and somewhere in between it all came a simple question: “Are you in a relationship?”
+                  One Sunday after church, during a youth relationship programme, we found ourselves sitting beside each other. The meeting was interactive, full of conversations and laughter, and somewhere in between it all came a simple question: “Are you in a relationship?”
 
-The answer was “No.”
+                  The answer was “No.”
 
-And somehow, that simple answer opened the door to a beautiful journey.</p>
+                  And somehow, that simple answer opened the door to a beautiful journey.</p>
               </div>
             </article>
             <article className="timeline-item">
@@ -55,9 +81,9 @@ And somehow, that simple answer opened the door to a beautiful journey.</p>
                 <h3>From friendship to love</h3>
                 <p>A few days later, our conversations moved from the church hall to our DMs. What started as friendship slowly began to take a different shape.
 
-We already knew each other, but we started getting to know each other in a new way—our dreams, our personalities, our faith, our hopes and the things that mattered to us.
+                  We already knew each other, but we started getting to know each other in a new way—our dreams, our personalities, our faith, our hopes and the things that mattered to us.
 
-After about two months, in August, friendship became a relationship. And just like that, a new chapter of our story began.</p>
+                  After about two months, in August, friendship became a relationship. And just like that, a new chapter of our story began.</p>
               </div>
             </article>
             <article className="timeline-item">
@@ -66,11 +92,11 @@ After about two months, in August, friendship became a relationship. And just li
                 <h3>From Two families, one journey</h3>
                 <p>On 14 January 2026, on her birthday, came another unforgettable moment: a proposal and a beautiful “Yes.” 💍
 
-From that moment, our conversations became plans for a future together.
+                  From that moment, our conversations became plans for a future together.
 
-She met my parents in December, I met her parents in January, and on 13 July 2026, our families came together for our formal introduction.
+                  She met my parents in December, I met her parents in January, and on 13 July 2026, our families came together for our formal introduction.
 
-What began between two people was becoming the joining of two families.</p>
+                  What began between two people was becoming the joining of two families.</p>
               </div>
             </article>
             <article className="timeline-item">
@@ -79,15 +105,15 @@ What began between two people was becoming the joining of two families.</p>
                 <h3>The beginning of our forever</h3>
                 <p>Looking back, it amazes us how a simple conversation after church could lead us here.
 
-From strangers who admired each other from a distance, to friends, to partners, to two people preparing to spend the rest of their lives together.
+                  From strangers who admired each other from a distance, to friends, to partners, to two people preparing to spend the rest of their lives together.
 
-On 05 December 2026, surrounded by our families, friends and loved ones, we will begin the next chapter of our story.
+                  On 05 December 2026, surrounded by our families, friends and loved ones, we will begin the next chapter of our story.
 
-We may not know everything the future holds, but we know the One who holds our future.
+                  We may not know everything the future holds, but we know the One who holds our future.
 
-And now, we choose forever.
+                  And now, we choose forever.
 
-Forever, by His Grace.</p>
+                  Forever, by His Grace.</p>
               </div>
             </article>
           </div>
@@ -132,39 +158,45 @@ Forever, by His Grace.</p>
             <h2>Gallery</h2>
           </div>
 
-          <section className="image-slider">
-            <div className="slides">
-              <img src="/images/img3.jpeg" alt="Photo 1" />
-              <img src="/images/img6.jpeg" alt="Photo 2" />
-              <img src="/images/img7.jpg" alt="Photo 3" />
-              <img src="/images/img4.jpg" alt="Photo 4" />
-              
-            
-            </div>
-          </section>
+          <GallerySlider />
         </section>
 
         <section className="section gift" id="gift">
-          <div className="section-label">05 — WITH LOVE</div>
-          <h2>Gifts & Wishes</h2>
-          <p className="script">Your presence is our greatest gift</p>
+          <div className="gift-heading">
+            <div className="section-label">05 — WITH LOVE</div>
+            <h2>Gifts &amp; Wishes</h2>
+            <p className="script">Your presence is our greatest gift</p>
+          </div>
           <div className="wishlist">
-            <div className="wish-item"><span>HONEYMOON FUND</span><span className="placeholder">Surprise us</span></div>
-            <div className="wish-item"><span>WASHING MACHINE</span><span className="placeholder">₦380,000</span></div>
-            <div className="wish-item"><span>TELEVISION</span><span className="placeholder">₦400,000</span></div>
-            <div className="wish-item"><span>FOOD PROCESSOR</span><span className="placeholder">₦75,000</span></div>
-            <div className="wish-item"><span>i don't know </span><span className="placeholder">₦70,000</span></div>
-            <div className="wish-item"><span>AIR FRYER </span><span className="placeholder">₦75,000</span></div>
-            <div className="wish-item"><span>INVERTER</span><span className="placeholder">₦2,000,000</span></div>
-            <div className="wish-item"><span>SANDWICH MAKER</span><span className="placeholder">₦50,000</span></div>
+            {giftItems.map(({ name, price, icon: Icon, featured }) => (
+              <article className={`wish-item${featured ? " wish-item-featured" : ""}`} key={name}>
+                <div className="gift-item-icon">
+                  <Icon aria-hidden="true" strokeWidth={1.4} />
+                </div>
+                <h3>{name}</h3>
+                <p className="gift-item-price">{price}</p>
+                {featured && <Heart className="gift-item-heart" aria-hidden="true" size={15} />}
+              </article>
+            ))}
           </div>
           <div className="gift-card">
-            <p>For friends and family who would like to bless us with a gift, details can be added below.</p>
-            <div className="account">
-              <strong>Bank / Gift Details</strong>
-              <span>Bank Name: Opay</span>
-              <span>Account Name: TEMITOPE & OLADELE</span>
-              <span>Account Number: 8068384394</span>
+            <div className="gift-card-copy">
+              <p className="script">A little gift, a lot of love</p>
+              <p>For friends and family who would like to bless us with a gift, here are our details.</p>
+            </div>
+            <div className="account" aria-label="Bank and gift details">
+              <div className="account-row">
+                <Landmark aria-hidden="true" />
+                <span><span className="account-label">Bank Name</span><strong>Opay</strong></span>
+              </div>
+              <div className="account-row">
+                <UserRound aria-hidden="true" />
+                <span><span className="account-label">Account Name</span><strong>TEMITOPE &amp; OLADELE</strong></span>
+              </div>
+              <div className="account-row">
+                <CreditCard aria-hidden="true" />
+                <span><span className="account-label">Account Number</span><strong>8068384394</strong></span>
+              </div>
             </div>
           </div>
         </section>
