@@ -90,7 +90,9 @@ export default async function Attendees({
                                             <tr>
                                                 <td className="px-4 py-5 text-center" colSpan={8}>
                                                     {
-                                                        page > pagination.totalPages ? "Wahala, water don pass garri! Check the page value in the URL.": 'No attendees yet!'
+                                                        attendees.length < 1 ? 'No attendees yet!': (
+                                                            page > pagination.totalPages ? "Chai! Check the page value in the URL, biko.": ""
+                                                        )
                                                     }
                                                 </td>
                                             </tr>
@@ -102,7 +104,7 @@ export default async function Attendees({
                         </div>
                         <div className="flex justify-between items-center border border-gray-200 p-3 rounded-md">
                             <div className="text-sm">
-                                Showing {pagination.page} of {pagination.totalPages} pages
+                                Showing {attendees.length > 0 ? pagination.page: 0} of {pagination.totalPages} pages
                             </div>
                             <div className="flex items-center gap-3">
                                 <Link href={page < 2 ? "#" : `?page=${page - 1}`} className={`bg-white border border-gray-200 text-gray-500 rounded-md size-8 flex items-center justify-center ${page < 2 ? 'opacity-40 cursor-not-allowed': "opacity-100 cursor-pointer"}`}>
