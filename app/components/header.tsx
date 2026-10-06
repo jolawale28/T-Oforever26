@@ -38,7 +38,7 @@ export const NavBar = () => {
 
     return (
         <nav className="nav">
-            <a className="brand" href="#home">T'O <span>Forever '26</span></a>
+            <a className="brand" href="/#home">T'O <span>Forever '26</span></a>
             <button
                 className="menu-btn cursor-pointer"
                 id="menuBtn"
